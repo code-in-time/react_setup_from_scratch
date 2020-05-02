@@ -7,7 +7,7 @@ I'm following tutorial
 
 
 -- TODO
-- [] add css
+- [x] add css
 - [] add env
 - [x] add local build hot reload
 - [] add jest test run
