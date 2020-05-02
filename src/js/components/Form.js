@@ -29,12 +29,10 @@ class Form extends Component {
           value={this.state.value}
           onChange={this.handleChange}
         />
+        {this.state.value}
       </form>
     );
   }
 }
 
 export default Form;
-
-const wrapper = document.getElementById("container");
-wrapper ? ReactDOM.render(<Form />, wrapper) : false;

@@ -7,8 +7,9 @@ I'm following tutorial
 
 
 -- TODO
-- add css
-- add env
-- add local build hot reload
-- add jest test run
-- code splitting
+- [] add css
+- [] add env
+- [x] add local build hot reload
+- [] add jest test run
+- [] code splitting
+- [] typescript

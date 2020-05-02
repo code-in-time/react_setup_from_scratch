@@ -1,6 +1,13 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  devServer: {
+    port: 3001, // Specify a port number to listen for requests
+    stats: {
+      children: false, // Hide children information
+      maxModules: 0 // Set the maximum number of modules to be shown
+    }
+  },
   module: {
     rules: [
       {
