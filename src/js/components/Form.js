@@ -23,10 +23,11 @@ class Form extends Component {
 
   render() {
 
-    console.log(process.env.DB_HOST);
+    console.log();
 
     return (
       <form>
+        {process.env.DB_HOST}
         <input
           type="text"
           value={this.state.value}

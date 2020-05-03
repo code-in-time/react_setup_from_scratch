@@ -2,6 +2,10 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
+// const envPath = (env) => {
+//   return env.production === 'true' ? './.env' : './.env.local'
+// }
+
 module.exports = env => {
 
   console.log('webpack env', env)
@@ -47,7 +51,10 @@ module.exports = env => {
         template: "./src/index.html",
         filename: "./index.html"
       }),
-      new Dotenv()
+      new Dotenv({
+        // custom env file
+        path: env.production === 'true' ? './.env' : './.env.local'
+      })
     ]
   }
 };

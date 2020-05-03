@@ -8,7 +8,7 @@ I'm following tutorial
 
 -- TODO
 - [x] add css
-- [] add env
+- [x] add env
 - [x] add local build hot reload
 - [] add jest test run
 - [] code splitting

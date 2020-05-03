@@ -4,8 +4,8 @@
   "description": "I'm following tutorial  - https://www.valentinog.com/blog/babel/",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development --env.NODE_ENV=local1 --env.production --progress",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --open --mode development --env.NODE_ENV=local1 --env.production=false --progress",
+    "build": "webpack --mode production --env.production=true --progress"
   },
   "repository": {
     "type": "git",
