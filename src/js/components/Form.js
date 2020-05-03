@@ -22,6 +22,9 @@ class Form extends Component {
   }
 
   render() {
+
+    console.log(process.env.DB_HOST);
+
     return (
       <form>
         <input
