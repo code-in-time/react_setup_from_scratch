@@ -12,4 +12,4 @@ I'm following tutorial
 - [x] add local build hot reload
 - [] add jest test run
 - [] code splitting
-- [] typescript
+- [x] typescript
