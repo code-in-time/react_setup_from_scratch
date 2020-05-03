@@ -6,7 +6,7 @@ class Form extends Component {
     super();
 
     this.state = {
-      value: ""
+      value: "my input"
     };
 
     this.handleChange = this.handleChange.bind(this);

@@ -4,7 +4,7 @@
   "description": "I'm following tutorial  - https://www.valentinog.com/blog/babel/",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open --mode development --env.NODE_ENV=local1 --env.production --progress",
     "build": "webpack --mode production"
   },
   "repository": {
