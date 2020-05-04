@@ -3,7 +3,7 @@
 I'm following tutorial 
 - https://www.valentinog.com/blog/babel/
 
-
+### NOTE: This is a work in progress
 
 
 -- TODO
