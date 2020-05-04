@@ -11,7 +11,7 @@ module.exports = env => {
   console.log('webpack env', env)
 
   return {
-    entry: './src/index.js',
+    entry: './src/index.tsx',
     output: {
       filename: 'bundle.js',
       path: path.resolve(__dirname, 'distPlace'),
@@ -23,13 +23,18 @@ module.exports = env => {
         maxModules: 0 // Set the maximum number of modules to be shown
       }
     },
+    resolve: {
+      // Add `.ts` and `.tsx` as a resolvable extension.
+      extensions: [".ts", ".tsx", ".js"]
+    },
     module: {
       rules: [
+        // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
         {
-          test: /\.(js|jsx)$/,
+          test: /\.tsx?$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader"
+            loader: "ts-loader"
           }
         },
         {

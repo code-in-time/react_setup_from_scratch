@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-class Form extends Component {
-  constructor() {
-    super();
+interface IState {
+  value: string
+}
+
+class Form extends Component<{}, IState> {
+  constructor(props: any) {
+    super(props);
 
     this.state = {
       value: "my input"
@@ -12,12 +16,10 @@ class Form extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange(event: any) {
     const { value } = event.target;
-    this.setState(() => {
-      return {
+    this.setState({
         value
-      };
     });
   }
 

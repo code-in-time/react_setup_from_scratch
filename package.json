@@ -28,11 +28,13 @@
     "html-webpack-plugin": "^4.3.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@types/html-webpack-plugin": "^3.2.2",
     "@types/lodash": "^4.14.150",
     "dotenv-webpack": "^1.7.0",
     "react": "^16.13.1",
