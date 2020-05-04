@@ -10,6 +10,6 @@ I'm following tutorial
 - [x] add css
 - [x] add env
 - [x] add local build hot reload
-- [] add jest test run
+- [x] add jest test run
 - [] code splitting
 - [x] typescript
