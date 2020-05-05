@@ -1,11 +1,14 @@
 import React from 'react';
 import './Main.css';
 import Button from './Button';
+import AddTodoArea from './AddTodoArea';
 
 const Main = () => {
   return (
     <div className="Main">
-      <div className="item-1">Head</div>
+      <div className="item-1">
+        <AddTodoArea />
+      </div>
       <div className="item-2">
 
       <div className="wrapper">
