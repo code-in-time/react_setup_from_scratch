@@ -1,0 +1,41 @@
+div.Main {
+  max-width: 100%;
+  margin: 3em auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 2fr;
+  grid-template-rows: 50px 150px 50px;
+  grid-template-areas:
+      "head head . side"
+      "main main . side"
+      "footer footer footer footer";
+}
+
+/* div.main div.item {
+  border-radius: 3px;
+  margin: 2px;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+div.Main div.item.item-1 {
+  grid-area: head;
+  background: blue;
+}
+
+div.Main div.item.item-2 {
+  grid-area: main;
+  background: orange
+}
+
+div.Main div.item.item-3 {
+  grid-area: side;
+  background: pink
+}
+
+div.Main div.item.item-4 {
+  grid-area: footer;
+  background: #0A3442;
+}
