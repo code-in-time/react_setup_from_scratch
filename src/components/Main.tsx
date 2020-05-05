@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.css';
+import Button from './Button';
 
 const Main = () => {
   return (
@@ -13,7 +14,12 @@ const Main = () => {
       </div>
 
       </div>
-      <div className="item-3">Side</div>
+      <div className="item-3">
+        <Button txt="Record"/>
+        <Button txt="Stop Recording"/>
+        <Button txt="Clear Recording"/>
+        <Button txt="Play Recording"/>
+      </div>
       <div className="item-4">Footer</div>
     </div>
   );
