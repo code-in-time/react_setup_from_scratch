@@ -2,6 +2,7 @@ import React from 'react';
 import './Main.css';
 import Button from './Button';
 import AddTodoArea from './AddTodoArea';
+import TodoArea from './TodoArea';
 
 const Main = () => {
   return (
@@ -12,7 +13,9 @@ const Main = () => {
       <div className="item-2">
 
       <div className="wrapper">
-        <div className="side-left">side-left</div>
+        <div className="side-left">
+          <TodoArea />
+        </div>
         <div className="side-right">side-right</div>
       </div>
 

@@ -13,3 +13,6 @@ I'm following tutorial
 - [x] add jest test run
 - [] code splitting
 - [x] typescript
+
+### NOTES:
+- mobx: https://mobx-react.js.org/recipes-context#multiple-global-stores
