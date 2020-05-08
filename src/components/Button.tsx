@@ -4,11 +4,13 @@ import './Button.css'
 interface IProps {
   txt: string,
   onClick: () => void
+  className?: string
 }
 
-const Button: FunctionComponent<IProps> = ({txt, onClick}) => {
+const Button: FunctionComponent<IProps> = ({txt, onClick, className = ''}) => {
+  const classN = className;
   return (
-    <button className="Button" type="button" onClick={onClick}>
+    <button className={`Button ${classN}`} type="button" onClick={onClick}>
         {txt}
     </button>
   );

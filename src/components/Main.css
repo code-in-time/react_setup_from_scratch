@@ -1,9 +1,9 @@
 div.Main {
-  max-width: 600px;
+  max-width: 700px;
   margin: 3em auto;
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr 2fr;
-  grid-template-rows: 50px 150px 50px;
+  grid-template-columns: 4fr 4fr 0.5fr 2fr;
+  grid-template-rows: 60px 150px 50px;
   grid-template-areas:
       "head head . side"
       "main main . side"
@@ -13,6 +13,7 @@ div.Main {
 div.Main .item-1 {
   grid-area: head;
   background: rgb(250, 192, 192);
+  padding-left: 10px;
 }
 
 div.Main .item-2 {
