@@ -11,7 +11,7 @@ const AddTodoArea = () => {
         value={value}
         onChange={(e: React.FormEvent<EventTarget>):void => setValue((e.target as HTMLInputElement).value)}
       />
-      <Button txt="Add Todo" onClick={() => console.log('onClick Record')} className="lib-display-inline"/>
+      <Button txt="Add Todo" onClick={() => console.log('onClick Record', value)} className="lib-display-inline"/>
     </div>
   );
 };
