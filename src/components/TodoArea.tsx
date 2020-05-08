@@ -25,6 +25,7 @@ const TodoArea = observer(() => {
           <div className="itemName">{v.name}</div>
           {/*<div className="itemDate">{v.creationDate}</div>*/}
           <div className="itemDesc">{v.description}</div>
+          <div className="itemControl">btn</div>
         </div>
       ))}
     </div>

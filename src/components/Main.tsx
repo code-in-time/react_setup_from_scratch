@@ -14,10 +14,7 @@ const Main = () => {
       <div className="item-2">
 
       <div className="wrapper">
-        <div className="side-left">
           <TodoArea />
-        </div>
-        <div className="side-right">side-right</div>
       </div>
 
       </div>

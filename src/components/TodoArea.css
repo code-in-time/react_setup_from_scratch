@@ -1,20 +1,25 @@
-div.TodoArea.area {
+div.TodoArea .area {
   display: grid;
-  /* grid-template: 10px 1fr ; */
+  grid-template-columns: 1fr 4fr 4fr 1fr;
   grid-template-areas:
-  'itemID itemName itemName'
-  'itemDesc itemDesc itemDesc';
+  'itemID itemName itemName itemControl'
+  'itemDesc itemDesc itemDesc itemControl';
+  background-color: aquamarine;
+  margin:5px;
 }
 
-div.TodoArea.area.itemID {
+div.TodoArea .area .itemID {
   grid-area: itemID;
 }
-div.TodoArea.area.itemName {
+div.TodoArea .area .itemName {
   grid-area: itemName;
 }
-div.TodoArea.area.itemDate {
+div.TodoArea .area .itemDate {
   grid-area: itemDate;
 }
-div.TodoArea.area.itemDesc {
+div.TodoArea .area .itemDesc {
   grid-area: itemDesc;
+}
+div.TodoArea .area .itemControl {
+  grid-area: itemControl;
 }

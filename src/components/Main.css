@@ -3,7 +3,7 @@ div.Main {
   margin: 3em auto;
   display: grid;
   grid-template-columns: 4fr 4fr 0.5fr 2fr;
-  grid-template-rows: 60px 150px 50px;
+  grid-template-rows: 60px auto 50px;
   grid-template-areas:
       "head head . side"
       "main main . side"
@@ -34,16 +34,11 @@ div.Main .item-4 {
 div.Main div.item-2 div.wrapper {
   max-width: 100%;
   display: grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr;
   grid-template-areas:
-      "side-left side-right"
+      "side-left"
 }
 div.Main div.item-2 div.wrapper div.side-left {
   grid-area: side-left;
-  background: rgb(209, 157, 44);
-}
-
-div.Main div.item-2 div.wrapper div.side-right {
-  grid-area: side-right;
   background: rgb(209, 157, 44);
 }
