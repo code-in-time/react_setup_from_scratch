@@ -1,0 +1,20 @@
+div.TodoArea.area {
+  display: grid;
+  /* grid-template: 10px 1fr ; */
+  grid-template-areas:
+  'itemID itemName itemName'
+  'itemDesc itemDesc itemDesc';
+}
+
+div.TodoArea.area.itemID {
+  grid-area: itemID;
+}
+div.TodoArea.area.itemName {
+  grid-area: itemName;
+}
+div.TodoArea.area.itemDate {
+  grid-area: itemDate;
+}
+div.TodoArea.area.itemDesc {
+  grid-area: itemDesc;
+}
