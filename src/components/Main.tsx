@@ -3,6 +3,7 @@ import './Main.css';
 import Button from './Button';
 import AddTodoArea from './AddTodoArea';
 import TodoArea from './TodoArea';
+import RightControls from './RightControls';
 
 const Main = () => {
   return (
@@ -21,10 +22,7 @@ const Main = () => {
 
       </div>
       <div className="item-3">
-        <Button txt="Record"/>
-        <Button txt="Stop Recording"/>
-        <Button txt="Clear Recording"/>
-        <Button txt="Play Recording"/>
+        <RightControls />
       </div>
       <div className="item-4">Footer</div>
     </div>
