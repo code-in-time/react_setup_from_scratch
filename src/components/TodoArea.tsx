@@ -9,7 +9,7 @@ import { useStore } from '../hooks/useStore'
 
 const TodoArea = observer(() => {
   const { TodoStore } = useStore()
-  const [isEditBtn, setIsEditBtn] = useState(true)
+  const [isEditItem, setIsEditItem] = useState(null)
 
   console.log('TodoStore', TodoStore)
 
@@ -22,18 +22,30 @@ const TodoArea = observer(() => {
       {s.length === 0 && <div>There are no To do's</div>}
 
       {s.length >= 1 &&
-        s.map((v: any) => (
+        s.map((v: ITodo) => (
           <div className="area" key={v.ID}>
             <div className="itemID">ID: {v.ID}</div>
-            <div className="itemName">Name: {v.name}</div>
+            <div className="itemName">Name: 
+            
+              {v.name}
+            
+            </div>
             <div className="itemDate">{v.creationDate.toString()}</div>
-            <div className="itemDesc">Desc: {v.description}</div>
+            <div className="itemDesc">Desc:
+
+              {v.description}
+              
+            </div>
             <div className="itemControl">
-              <Button txt={isEditBtn ? 'edit' : 'save'} onClick={() => {
-                console.log('isEdit', isEditBtn)
-                setIsEditBtn((prev) => !prev)
+              <Button txt={isEditItem === v.ID ? 'save' : 'edit'} onClick={() => {
+                console.log('isEdit', isEditItem)
+                if (isEditItem === v.ID) {
+                  setIsEditItem(null)
+                } else {
+                  setIsEditItem(v.ID)
+                }
               }} />
-              <Button disable={!isEditBtn} txt="delete" onClick={() => {
+              <Button disable={isEditItem === v.ID} txt="delete" onClick={() => {
                 TodoStore.deleteTodo(v.ID)
               }} />
 
