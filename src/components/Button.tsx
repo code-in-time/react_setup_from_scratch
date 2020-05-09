@@ -5,12 +5,13 @@ interface IProps {
   txt: string,
   onClick: () => void
   className?: string
+  disable?: boolean
 }
 
-const Button: FunctionComponent<IProps> = ({txt, onClick, className = ''}) => {
+const Button: FunctionComponent<IProps> = ({txt, onClick, className = '', disable = false}) => {
   const classN = className;
   return (
-    <button className={`Button ${classN}`} type="button" onClick={onClick}>
+    <button disabled={disable} className={`Button ${classN}`} type="button" onClick={onClick}>
         {txt}
     </button>
   );

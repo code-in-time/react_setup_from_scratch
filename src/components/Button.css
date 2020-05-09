@@ -12,9 +12,16 @@ button.Button {
   text-align: center;
   transition: all 0.2s;
   padding: 0;
+  cursor: pointer;
 }
 
-button.button:hover {
+button.Button:hover {
   color: #000000;
   background-color: #FFFFFF;
+}
+
+button.Button:disabled {
+  opacity: 0.4;
+  cursor: default;
+  color: orange;
 }

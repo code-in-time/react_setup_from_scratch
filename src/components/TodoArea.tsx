@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { observer } from 'mobx-react'
 import { toJS } from 'mobx'
 import './TodoArea.css'
@@ -9,6 +9,7 @@ import { useStore } from '../hooks/useStore'
 
 const TodoArea = observer(() => {
   const { TodoStore } = useStore()
+  const [isEditBtn, setIsEditBtn] = useState(true)
 
   console.log('TodoStore', TodoStore)
 
@@ -28,10 +29,12 @@ const TodoArea = observer(() => {
             <div className="itemDate">{v.creationDate.toString()}</div>
             <div className="itemDesc">Desc: {v.description}</div>
             <div className="itemControl">
-              <Button txt="save" onClick={() => console.log('save')} />
-              <Button txt="delete" onClick={() => {
+              <Button txt={isEditBtn ? 'edit' : 'save'} onClick={() => {
+                console.log('isEdit', isEditBtn)
+                setIsEditBtn((prev) => !prev)
+              }} />
+              <Button disable={!isEditBtn} txt="delete" onClick={() => {
                 TodoStore.deleteTodo(v.ID)
-                console.log('delete')
               }} />
 
             </div>
@@ -42,6 +45,3 @@ const TodoArea = observer(() => {
 });
 
 export default TodoArea;
-
-
-
