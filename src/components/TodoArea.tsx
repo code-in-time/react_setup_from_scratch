@@ -17,12 +17,17 @@ const TodoArea = observer(() => {
   console.log (toJS(s))
   return (
     <div className="TodoArea">
-      {s.map((v:any) => (
+
+    {s.length === 0 && <div>Ther are no To do's</div>}
+
+
+      {s.length >= 1 &&
+        s.map((v:any) => (
         <div className="area" key={v.ID}>
-          <div className="itemID">{v.ID}</div>
-          <div className="itemName">{v.name}</div>
+          <div className="itemID">ID: {v.ID}</div>
+          <div className="itemName">Name: {v.name}</div>
           <div className="itemDate">{v.creationDate.toString()}</div>
-          <div className="itemDesc">{v.description}</div>
+          <div className="itemDesc">Desc: {v.description}</div>
           <div className="itemControl">
             <Button txt="save" onClick={()=> console.log('save')}/>
             <Button txt="delete" onClick={()=> console.log('delete')}/>
