@@ -1,9 +1,11 @@
 div.TodoArea .area {
   display: grid;
-  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-template-columns: 8fr 1fr;
   grid-template-areas:
-  'itemID itemName itemName itemControl'
-  'itemDesc itemDesc itemDesc itemControl';
+  'itemID itemControl'
+  'itemName itemControl'
+  'itemDesc itemControl'
+  'itemDate itemControl';
   background-color: aquamarine;
   margin:5px;
 }

@@ -14,7 +14,7 @@ button.Button {
   padding: 0;
 }
 
-button.button {
+button.button:hover {
   color: #000000;
   background-color: #FFFFFF;
 }

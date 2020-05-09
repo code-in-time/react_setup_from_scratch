@@ -17,10 +17,12 @@ module.exports = env => {
       path: path.resolve(__dirname, 'distPlace'),
     },
     devServer: {
+      liveReload: true,
+      overlay: false,
       port: 3001, // Specify a port number to listen for requests
       stats: {
         children: false, // Hide children information
-        maxModules: 0 // Set the maximum number of modules to be shown
+        // maxModules: 0 // Set the maximum number of modules to be shown
       }
     },
     resolve: {

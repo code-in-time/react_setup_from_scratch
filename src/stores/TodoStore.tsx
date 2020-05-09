@@ -12,9 +12,16 @@ export default class TodoStore {
       {ID: 5, name:'test5', description: 'des5', creationDate: new Date()}
     ]
 
-  @action
-  addTodo(item: ITodo) {
-    this.data.push(item)
+  @action.bound
+  addTodo(name: string, desc: string) {
+    const todo: ITodo =
+      {
+        ID: Math.floor((Math.random() * 8000) + 1),
+        name: name,
+        description: desc,
+        creationDate: new Date()
+      }
+    this.data.push(todo)
   }
 
   // @action
