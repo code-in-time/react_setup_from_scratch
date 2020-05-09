@@ -25,6 +25,18 @@ export default class TodoStore {
     this.data.splice(index, 1)
   }
 
+  @action
+  updateTodo(ID: number, name: string, desc: string) {
+
+    const index = this.data.findIndex(v => v.ID === ID)
+    console.log('match', index)
+    const item: ITodo = this.data[index]
+    item.name = name
+    item.description = desc
+    item.creationDate = new Date()
+
+  }
+
   // @action
   // decrement() {
   //   this.count--
