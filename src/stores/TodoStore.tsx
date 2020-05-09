@@ -5,7 +5,7 @@ export default class TodoStore {
   @observable
   data: ITodo[] = []
 
-  @action.bound
+  @action
   addTodo(name: string, desc: string) {
     const todo: ITodo =
       {
@@ -15,6 +15,14 @@ export default class TodoStore {
         creationDate: new Date()
       }
     this.data.push(todo)
+  }
+
+  @action
+  deleteTodo(ID: number) {
+
+    const index = this.data.findIndex(v => v.ID === ID)
+    console.log('match', index)
+    this.data.splice(index, 1)
   }
 
   // @action
