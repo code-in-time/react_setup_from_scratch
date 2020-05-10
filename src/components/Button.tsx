@@ -1,9 +1,9 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useState, MutableRefObject } from 'react';
 import './Button.css'
 
-interface IProps {
+interface IProps extends React.HTMLProps<HTMLButtonElement> {
   txt: string,
-  onClick: () => void
+  onClick: (e: React.MouseEvent<HTMLElement>) => void
   className?: string
   disable?: boolean
 }
