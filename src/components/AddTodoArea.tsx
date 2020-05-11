@@ -3,6 +3,7 @@ import { observer } from 'mobx-react'
 import Button from './Button';
 import { storesContext } from '../stores/context';
 import { useStore } from '../hooks/useStore'
+import { debug } from 'webpack';
 
 const AddTodoArea = observer((props: any) => {
   const { TodoStore, Tracker } = useStore()
@@ -24,7 +25,8 @@ const AddTodoArea = observer((props: any) => {
         value={name}
         onChange={(e: React.FormEvent<EventTarget>): void => {
           setName((e.target as HTMLInputElement).value)
-          Tracker.log(refName, e.type, name)
+          debugger
+          Tracker.log(refName, e.type, name, e.target.toString())
         }}
       />
       <input
@@ -34,7 +36,7 @@ const AddTodoArea = observer((props: any) => {
         value={desc}
         onChange={(e: React.FormEvent<EventTarget>): void => {
           setDesc((e.target as HTMLInputElement).value)
-          Tracker.log(refDesc, e.type, desc)
+          Tracker.log(refDesc, e.type, desc, e.target.toString())
         }}
       />
       <Button
@@ -42,7 +44,7 @@ const AddTodoArea = observer((props: any) => {
         ref={refBtnAdd}
         onClick={(e: React.MouseEvent<HTMLElement>) => {
           TodoStore.addTodo(name, desc)
-          Tracker.log(refBtnAdd, e.type, null)
+          Tracker.log(refBtnAdd, e.type, null, e.target.toString())
         }}
         className="lib-display-inline" />
     </div>

@@ -4,7 +4,8 @@ import { ITodo } from '../types';
 interface ITrack {
   ref: any,
   event: any,
-  value: string
+  value: string,
+  target: string
 }
 
 class Tracker {
@@ -21,7 +22,7 @@ class Tracker {
   play() {
     const arr = toJS(this.track)
     let index = 0;
-
+    debugger
     // loop
     let interval = setInterval(() => {
       console.log(arr[index++]);
@@ -43,12 +44,13 @@ class Tracker {
   }
 
   @action
-    log(ref: any, event: any, value: string) {
+    log(ref: any, event: any, value: string, target: string,) {
     // debugger
     const obj: ITrack = {
       ref,
       event,
-      value
+      value,
+      target
     }
     this.track.push(obj)
     console.log('track', this.track)
