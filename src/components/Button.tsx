@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, MutableRefObject } from 'react';
+import React, { FunctionComponent, useState, MutableRefObject, forwardRef } from 'react';
 import './Button.css'
 
 interface IProps extends React.HTMLProps<HTMLButtonElement> {
@@ -8,13 +8,13 @@ interface IProps extends React.HTMLProps<HTMLButtonElement> {
   disable?: boolean
 }
 
-const Button: FunctionComponent<IProps> = ({txt, onClick, className = '', disable = false}) => {
+const Button: FunctionComponent<IProps> = forwardRef(({txt, onClick, className = '', disable = false}, ref) => {
   const classN = className;
   return (
-    <button disabled={disable} className={`Button ${classN}`} type="button" onClick={onClick}>
+    <button ref={ref} disabled={disable} className={`Button ${classN}`} type="button" onClick={onClick}>
         {txt}
     </button>
   );
-};
+});
 
 export default Button;

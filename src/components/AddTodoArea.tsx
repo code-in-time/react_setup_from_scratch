@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useRef } from 'react';
+import React, { FunctionComponent, useState, useRef, createRef } from 'react';
 import { observer } from 'mobx-react'
 import Button from './Button';
 import { storesContext } from '../stores/context';
@@ -11,7 +11,7 @@ const AddTodoArea = observer((props: any) => {
   const [desc, setDesc] = useState('')
   const { TodoStore } = useStore()
 
-  const refBtnAdd = useRef(null);
+  const refBtnAdd = useRef<HTMLButtonElement>(null)
   const refName = useRef(null);
   const refDesc = useRef(null);
 

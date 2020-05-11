@@ -13,7 +13,8 @@ const RightControls = () => {
           console.log('onClick Play Recording')
           console.log(EventTracker.track)
           // debugger
-          EventTracker.track[2].ref.current.focus()
+          // EventTracker.track[2].ref.current.focus()
+          EventTracker.track[4].ref.current.click()
         }}/>
     </div>
   );
