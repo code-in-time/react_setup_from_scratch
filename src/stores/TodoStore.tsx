@@ -1,9 +1,14 @@
 import { observable, action, computed } from 'mobx';
 import { ITodo } from '../types';
 
-export default class TodoStore {
+class TodoStore {
   @observable
   data: ITodo[] = []
+
+  @action
+  reset() {
+    this.data = []
+  }
 
   @action
   addTodo(name: string, desc: string) {
@@ -36,14 +41,8 @@ export default class TodoStore {
     item.creationDate = new Date()
 
   }
-
-  // @action
-  // decrement() {
-  //   this.count--
-  // }
-
-  // @computed
-  // get doubleCount() {
-  //   return this.count * 2
-  // }
 }
+
+
+
+export default new TodoStore()
