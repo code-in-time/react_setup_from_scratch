@@ -20,24 +20,34 @@ class Tracker {
 
   @action
   play() {
-    const arr = toJS(this.track)
+    const arr: ITrack[] = toJS(this.track)
     let index = 0;
-    debugger
+
+    // debugger
     // loop
     let interval = setInterval(() => {
-      console.log(arr[index++]);
 
-      // perform action
-      const item = arr[index]
-      item.ref.current.value = item.value
+      // debugger
+      switch (arr[index].target) {
+        case 'INPUT':
+          arr[index].ref.current.value = arr[index].value
+          break;
+        case 'BUTTON':
+          arr[index].ref.current.click()
+          break;
+      
+        default:
+          console.log('no match')
+          break;
+      }
 
+      arr[index++]
 
-
-
-
-      if (index == arr.length) {
+      // Exit loop
+      if (index >= arr.length) {
         clearInterval(interval);
       }
+
     }, 1000)
 
 
@@ -53,7 +63,7 @@ class Tracker {
       target
     }
     this.track.push(obj)
-    console.log('track', this.track)
+    console.log('track', toJS(this.track))
   }
 
 

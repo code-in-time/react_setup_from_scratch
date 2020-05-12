@@ -23,10 +23,10 @@ const AddTodoArea = observer((props: any) => {
         placeholder="Name"
         ref={refName}
         value={name}
-        onChange={(e: React.FormEvent<EventTarget>): void => {
-          setName((e.target as HTMLInputElement).value)
-          debugger
-          Tracker.log(refName, e.type, name, e.target.toString())
+        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+          setName(e.target.value)
+          console.log(e.target.value, name)
+          Tracker.log(refName, e.type, e.target.value, e.currentTarget.tagName)
         }}
       />
       <input
@@ -34,17 +34,17 @@ const AddTodoArea = observer((props: any) => {
         placeholder="Description"
         ref={refDesc}
         value={desc}
-        onChange={(e: React.FormEvent<EventTarget>): void => {
-          setDesc((e.target as HTMLInputElement).value)
-          Tracker.log(refDesc, e.type, desc, e.target.toString())
+        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+          setDesc(e.target.value)
+          Tracker.log(refDesc, e.type, e.target.value, e.currentTarget.tagName)
         }}
       />
       <Button
         txt="Add Todo"
         ref={refBtnAdd}
-        onClick={(e: React.MouseEvent<HTMLElement>) => {
+        onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
           TodoStore.addTodo(name, desc)
-          Tracker.log(refBtnAdd, e.type, null, e.target.toString())
+          Tracker.log(refBtnAdd, e.type, null, e.currentTarget.tagName)
         }}
         className="lib-display-inline" />
     </div>
