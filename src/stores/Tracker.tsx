@@ -5,7 +5,8 @@ interface ITrack {
   ref: any,
   event: any,
   value: string,
-  target: string
+  target: string,
+  handler? : any
 }
 
 class Tracker {
@@ -30,7 +31,9 @@ class Tracker {
       // debugger
       switch (arr[index].target) {
         case 'INPUT':
-          arr[index].ref.current.value = arr[index].value
+          // arr[index].ref.current.value = arr[index].value
+          arr[index].handler(arr[index].value)
+          // debugger
           break;
         case 'BUTTON':
           arr[index].ref.current.click()
@@ -54,13 +57,14 @@ class Tracker {
   }
 
   @action
-    log(ref: any, event: any, value: string, target: string,) {
+    log(ref: any, event: any, value: string, target: string, handler: any = null) {
     // debugger
     const obj: ITrack = {
       ref,
       event,
       value,
-      target
+      target,
+      handler
     }
     this.track.push(obj)
     console.log('track', toJS(this.track))

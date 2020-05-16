@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useRef, createRef } from 'react';
+import React, { FunctionComponent, useState, useRef, createRef, useEffect } from 'react';
 import { observer } from 'mobx-react'
 import Button from './Button';
 import { storesContext } from '../stores/context';
@@ -15,6 +15,25 @@ const AddTodoArea = observer((props: any) => {
   const refName = useRef(null);
   const refDesc = useRef(null);
 
+  useEffect(() => {
+    console.log('name')
+  }, [name])
+
+  useEffect(() => {
+    console.log('desc')
+  }, [description])
+
+  const onChangeNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value)
+    Tracker.log(refName, e.type, e.target.value, e.currentTarget.tagName, setName.bind(this))
+  }
+
+  const onChangeDescHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDescription(e.target.value)
+    Tracker.log(refDesc, e.type, e.target.value, e.currentTarget.tagName, setDescription.bind(this))
+  }
+
+
   return (
     <div>
       <strong>Add a todo please</strong> <br />
@@ -24,10 +43,7 @@ const AddTodoArea = observer((props: any) => {
         ref={refName}
         value={name}
         onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
-          setName(e.target.value)
-          // setName(e.target.value)
-          console.log(e.target.value, name)
-          Tracker.log(refName, e.type, e.target.value, e.currentTarget.tagName)
+          onChangeNameHandler(e)
         }}
       />
       <input
@@ -36,8 +52,7 @@ const AddTodoArea = observer((props: any) => {
         ref={refDesc}
         value={description}
         onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
-          setDescription(e.target.value)
-          Tracker.log(refDesc, e.type, e.target.value, e.currentTarget.tagName)
+          onChangeDescHandler(e)
         }}
       />
       <Button
