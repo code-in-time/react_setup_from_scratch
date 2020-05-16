@@ -23,3 +23,6 @@ I'm following tutorial
 
 ### Run cypress
 - $(npm bin)/cypress open
+
+### How trigger on chnage
+<https://stackoverflow.com/questions/42550341/react-trigger-onchange-if-input-value-is-changing-by-state/42554283>
