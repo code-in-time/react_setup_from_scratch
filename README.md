@@ -13,6 +13,13 @@ I'm following tutorial
 - [x] add jest test run
 - [] code splitting
 - [x] typescript
+- [] Add scss loader
+- [] cypress the tests
+- [] jests tests
+- [] extend the recording functionality
 
 ### NOTES:
 - mobx: https://mobx-react.js.org/recipes-context#multiple-global-stores
+
+### Run cypress
+- $(npm bin)/cypress open
