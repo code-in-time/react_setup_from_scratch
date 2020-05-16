@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.css';
+import './Main.scss';
 import Button from './Button';
 import AddTodoArea from './AddTodoArea';
 import TodoArea from './TodoArea';

@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState, MutableRefObject, forwardRef } from 'react';
-import './Button.css'
+import './Button.scss'
 
 interface IProps extends React.HTMLProps<HTMLButtonElement> {
   txt: string,

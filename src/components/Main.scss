@@ -5,9 +5,9 @@ div.Main {
   grid-template-columns: 4fr 4fr 0.5fr 2fr;
   grid-template-rows: 60px auto 50px;
   grid-template-areas:
-      "head head . side"
-      "main main . side"
-      "footer footer footer footer";
+    "head head . side"
+    "main main . side"
+    "footer footer footer footer";
 }
 
 div.Main .item-1 {
@@ -18,27 +18,27 @@ div.Main .item-1 {
 
 div.Main .item-2 {
   grid-area: main;
-  background: orange
+  background: orange;
 }
 
 div.Main .item-3 {
   grid-area: side;
-  background: pink
+  background: pink;
 }
 
 div.Main .item-4 {
   grid-area: footer;
-  background: #0A3442;
+  background: #0a3442;
 }
 
-div.Main div.item-2 div.wrapper {
+div.item-2 div.wrapper {
   max-width: 100%;
   display: grid;
-  grid-template-columns:1fr;
-  grid-template-areas:
-      "side-left"
-}
-div.Main div.item-2 div.wrapper div.side-left {
-  grid-area: side-left;
-  background: rgb(209, 157, 44);
+  grid-template-columns: 1fr;
+  grid-template-areas: "side-left";
+
+  div.side-left {
+    grid-area: side-left;
+    background: rgb(209, 157, 44);
+  }
 }

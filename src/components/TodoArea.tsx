@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { observer } from 'mobx-react'
 import { toJS } from 'mobx'
-import './TodoArea.css'
+import './TodoArea.scss'
 import { ITodo } from '../types';
 import AddTodoArea from './AddTodoArea';
 import Button from './Button';
