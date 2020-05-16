@@ -24,8 +24,5 @@ describe('Add a Todo', () => {
 
     cy.get('.TodoArea').find('.itemName').contains('this is text')
     cy.get('.TodoArea').find('.itemDesc').contains('this is a description')
-
-
-
   })
 })
