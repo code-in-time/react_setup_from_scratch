@@ -13,7 +13,7 @@ I'm following tutorial
 - [x] add jest test run
 - [] code splitting
 - [x] typescript
-- [] Add scss loader
+- [x] Add scss loader
 - [x] cypress the tests
 - [] jests tests
 - [] extend the recording functionality
