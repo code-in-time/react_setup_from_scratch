@@ -14,7 +14,7 @@ I'm following tutorial
 - [] code splitting
 - [x] typescript
 - [] Add scss loader
-- [] cypress the tests
+- [x] cypress the tests
 - [] jests tests
 - [] extend the recording functionality
 
