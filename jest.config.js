@@ -9,5 +9,8 @@ module.exports = {
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"
   },
-  preset: 'ts-jest'
+  verbose: true,
+  preset: 'ts-jest',
+  // setupFilesAfterEnv: ["<rootDir>/src/setupTests.js"],
+  testEnvironment: 'node'
 }
