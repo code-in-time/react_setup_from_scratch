@@ -14,7 +14,7 @@
       "jest"
     ]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/setupTests.ts"],
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
