@@ -26,7 +26,7 @@ class TodoStore {
   deleteTodo(ID: number) {
 
     const index = this.data.findIndex(v => v.ID === ID)
-    console.log('match', index)
+    // console.log('match', index)
     this.data.splice(index, 1)
   }
 
@@ -34,7 +34,7 @@ class TodoStore {
   updateTodo(ID: number, name: string, desc: string) {
 
     const index = this.data.findIndex(v => v.ID === ID)
-    console.log('match', index)
+    // console.log('match', index)
     const item: ITodo = this.data[index]
     item.name = name
     item.description = desc

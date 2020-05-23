@@ -8,7 +8,7 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = env => {
 
-  console.log('webpack env', env)
+  // console.log('webpack env', env)
 
   return {
     entry: './src/index.tsx',

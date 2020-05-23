@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development --env.NODE_ENV=local1 --env.production=false --progress",
     "build": "webpack --mode production --env.production=true --progress",
-    "test": "jest --watchAll",
+    "test": "jest --watch",
     "ctest": "cypress open"
   },
   "repository": {
@@ -34,6 +34,8 @@
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^25.5.4",
+    "jsdom": "16.2.2",
+    "jsdom-global": "3.0.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",

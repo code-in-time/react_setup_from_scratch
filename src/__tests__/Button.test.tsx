@@ -28,7 +28,7 @@ describe('Test the Button component', () => {
   })
 
   it('should test the disabled prop', () => {
-    console.log('show props',wrapper.props());
+    // console.log('show props',wrapper.props());
     expect(wrapper.prop('disabled')).toEqual(false)
   })
 

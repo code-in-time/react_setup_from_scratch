@@ -12,7 +12,7 @@ const RightControls = () => {
       <Button txt="Clear Recording" onClick={() => Tracker.reset()}/>
       <Button txt="Play Recording" onClick={
         () => {
-          console.log('onClick Play Recording')
+          // console.log('onClick Play Recording')
           // debugger
           // EventTracker.play[2].ref.current.focus()
           TodoStore.reset();

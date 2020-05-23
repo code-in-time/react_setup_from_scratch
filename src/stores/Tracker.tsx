@@ -40,7 +40,7 @@ class Tracker {
           break;
       
         default:
-          console.log('no match')
+          // console.log('no match')
           break;
       }
 
@@ -67,7 +67,7 @@ class Tracker {
       handler
     }
     this.track.push(obj)
-    console.log('track', toJS(this.track))
+    // console.log('track', toJS(this.track))
   }
 
 

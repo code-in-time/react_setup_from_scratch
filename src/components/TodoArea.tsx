@@ -14,11 +14,11 @@ const TodoArea = observer(() => {
   const [name, setName] = useState('')
   const [desc, setDesc] = useState('')
 
-  console.log('TodoStore', TodoStore)
+  // console.log('TodoStore', TodoStore)
 
   const s: ITodo[] = toJS(TodoStore.data);
 
-  console.log(toJS(s))
+  // console.log(toJS(s))
   return (
     <div className="TodoArea">
 
@@ -52,7 +52,7 @@ const TodoArea = observer(() => {
             </div>
             <div className="itemControl">
               <Button txt={isEditItem === v.ID ? 'save' : 'edit'} onClick={() => {
-                console.log('isEdit', isEditItem)
+                // console.log('isEdit', isEditItem)
                 if (isEditItem === v.ID) {
                   TodoStore.updateTodo(v.ID, name, desc)
                   setIsEditItem(null)

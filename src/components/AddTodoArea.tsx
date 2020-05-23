@@ -16,11 +16,11 @@ const AddTodoArea = observer((props: any) => {
   const refDesc = useRef(null);
 
   useEffect(() => {
-    console.log('name')
+    // console.log('name')
   }, [name])
 
   useEffect(() => {
-    console.log('desc')
+    // console.log('desc')
   }, [description])
 
   const onChangeNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
