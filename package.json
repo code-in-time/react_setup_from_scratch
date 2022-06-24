@@ -34,7 +34,7 @@
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^25.5.4",
-    "jsdom": "16.2.2",
+    "jsdom": "16.5.0",
     "jsdom-global": "3.0.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
